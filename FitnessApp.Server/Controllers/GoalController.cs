@@ -31,17 +31,17 @@ namespace FitnessApp.Server.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Goals>> GetGoal(string id)
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var goal = await _context.Goals.FindAsync(id);
 
             // Check if the goal exists and belongs to the user
-            if (goal == null || goal.User_Id != userId)
+            if (goal == null)
             {
                 return NotFound();
             }
 
             return goal;
         }
+
         // GET: api/goal/user/{userId}
         [HttpGet("user/{userId}")]
         public async Task<ActionResult<IEnumerable<Goals>>> GetGoalByUserId(string userId)
@@ -84,7 +84,7 @@ namespace FitnessApp.Server.Controllers
 
         // PUT: api/goal/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutGoal(string id, Goals goal,string User_Id)
+        public async Task<IActionResult> PutGoal(string id, Goals goal)
         {
             if (id != goal.Id)
             {

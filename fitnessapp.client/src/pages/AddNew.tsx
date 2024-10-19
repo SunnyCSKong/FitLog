@@ -267,7 +267,6 @@ function AddNew({ isLoggedIn }) {
                     label="Accomplish By"
                     value={goalDate}
                     onChange={(date) => setGoalDate(date)}
-                    required
                     sx={{
                       width: "40vw",
                       "& .MuiOutlinedInput-root": {
@@ -428,13 +427,12 @@ function AddNew({ isLoggedIn }) {
                   value={workoutDuration}
                   onChange={(e) => {
                     const value = Number(e.target.value);
-                    // Update the state based on the value
                     if (value < 0) {
-                      setWorkoutDuration(0); // Set to 0 if negative
+                      setWorkoutDuration(0);
                     } else if (value === 0) {
-                      setWorkoutDuration(0); // Clear the input if 0
+                      setWorkoutDuration(0);
                     } else {
-                      setWorkoutDuration(value); // Set to the positive value
+                      setWorkoutDuration(value);
                     }
                   }}
                   sx={{
@@ -477,6 +475,7 @@ function AddNew({ isLoggedIn }) {
                   }}
                 />
                 <br />
+
                 <FormControl
                   fullWidth
                   variant="outlined"

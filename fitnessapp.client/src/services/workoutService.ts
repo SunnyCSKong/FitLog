@@ -24,7 +24,26 @@ export const fetchWorkoutsByUserId = async (
     throw new Error(error instanceof Error ? error.message : "Unknown error");
   }
 };
+export const getWorkout = async (workoutId: string): Promise<IWorkoutTable> => {
+  try {
+    const response = await fetch(`${WORKOUTS}/${workoutId}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || "Failed to fetch workouts");
+    }
+
+    const data: IWorkoutTable = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error(error instanceof Error ? error.message : "Unknown error");
+  }
+};
 // Function to post a new workout
 export const postWorkout = async (
   workout: IWorkoutTable

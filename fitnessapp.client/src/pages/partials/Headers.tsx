@@ -8,7 +8,12 @@ export function GoalHeaders({ caller }) {
         <TableCell>Description</TableCell>
         <TableCell align="center">Status</TableCell>
         <TableCell align="center">Accomplish by</TableCell>
-        {caller !== "miniTable" && <TableCell />}
+        {caller !== "miniTable" && (
+          <>
+            <TableCell align="center" />
+            <TableCell align="center" />
+          </>
+        )}
       </TableRow>
     </TableHead>
   );
@@ -23,7 +28,13 @@ export function NutritionHeaders({ caller }) {
         <TableCell align="center">Weight (g)</TableCell>
         <TableCell align="center">Quantity</TableCell>
         <TableCell align="center">Date</TableCell>
-        {caller !== "miniTable" && <TableCell />}
+        {caller !== "miniTable" && (
+          <>
+            <TableCell align="center">Notes</TableCell>
+            <TableCell align="center" />
+            <TableCell align="center" />
+          </>
+        )}
       </TableRow>
     </TableHead>
   );
@@ -37,7 +48,11 @@ export function WorkoutHeaders({ caller }) {
         <TableCell>Type</TableCell>
         <TableCell align="center">Duration</TableCell>
         <TableCell align="center">Date</TableCell>
-        {caller !== "miniTable" && <TableCell />}
+        {caller !== "miniTable" && (
+          <>
+            <TableCell align="center" />
+          </>
+        )}
       </TableRow>
     </TableHead>
   );

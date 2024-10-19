@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Sunny\\Documents\\Dev\\FitnessApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0829F7A2-81E0-459A-A4EE-EFD669129E46}|FitnessApp.Server\\FitnessApp.Server.csproj|c:\\users\\sunny\\documents\\dev\\fitnessapp\\fitnessapp.server\\models\\workout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0829F7A2-81E0-459A-A4EE-EFD669129E46}|FitnessApp.Server\\FitnessApp.Server.csproj|solutionrelative:fitnessapp.server\\models\\workout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0829F7A2-81E0-459A-A4EE-EFD669129E46}|FitnessApp.Server\\FitnessApp.Server.csproj|c:\\users\\sunny\\documents\\dev\\fitnessapp\\fitnessapp.server\\controllers\\nutritioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0829F7A2-81E0-459A-A4EE-EFD669129E46}|FitnessApp.Server\\FitnessApp.Server.csproj|solutionrelative:fitnessapp.server\\controllers\\nutritioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0829F7A2-81E0-459A-A4EE-EFD669129E46}|FitnessApp.Server\\FitnessApp.Server.csproj|c:\\users\\sunny\\documents\\dev\\fitnessapp\\fitnessapp.server\\controllers\\goalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0829F7A2-81E0-459A-A4EE-EFD669129E46}|FitnessApp.Server\\FitnessApp.Server.csproj|solutionrelative:fitnessapp.server\\controllers\\goalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0829F7A2-81E0-459A-A4EE-EFD669129E46}|FitnessApp.Server\\FitnessApp.Server.csproj|c:\\users\\sunny\\documents\\dev\\fitnessapp\\fitnessapp.server\\controllers\\workoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0829F7A2-81E0-459A-A4EE-EFD669129E46}|FitnessApp.Server\\FitnessApp.Server.csproj|solutionrelative:fitnessapp.server\\controllers\\workoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0829F7A2-81E0-459A-A4EE-EFD669129E46}|FitnessApp.Server\\FitnessApp.Server.csproj|c:\\users\\sunny\\documents\\dev\\fitnessapp\\fitnessapp.server\\controllers\\goalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0829F7A2-81E0-459A-A4EE-EFD669129E46}|FitnessApp.Server\\FitnessApp.Server.csproj|solutionrelative:fitnessapp.server\\controllers\\goalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0829F7A2-81E0-459A-A4EE-EFD669129E46}|FitnessApp.Server\\FitnessApp.Server.csproj|c:\\users\\sunny\\documents\\dev\\fitnessapp\\fitnessapp.server\\models\\workout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0829F7A2-81E0-459A-A4EE-EFD669129E46}|FitnessApp.Server\\FitnessApp.Server.csproj|solutionrelative:fitnessapp.server\\models\\workout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NutritionController.cs",
+              "DocumentMoniker": "C:\\Users\\Sunny\\Documents\\Dev\\FitnessApp\\FitnessApp.Server\\Controllers\\NutritionController.cs",
+              "RelativeDocumentMoniker": "FitnessApp.Server\\Controllers\\NutritionController.cs",
+              "ToolTip": "C:\\Users\\Sunny\\Documents\\Dev\\FitnessApp\\FitnessApp.Server\\Controllers\\NutritionController.cs",
+              "RelativeToolTip": "FitnessApp.Server\\Controllers\\NutritionController.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAIwGEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T05:43:07.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Workout.cs",
               "DocumentMoniker": "C:\\Users\\Sunny\\Documents\\Dev\\FitnessApp\\FitnessApp.Server\\Models\\Workout.cs",
               "RelativeDocumentMoniker": "FitnessApp.Server\\Models\\Workout.cs",
               "ToolTip": "C:\\Users\\Sunny\\Documents\\Dev\\FitnessApp\\FitnessApp.Server\\Models\\Workout.cs",
               "RelativeToolTip": "FitnessApp.Server\\Models\\Workout.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAswFwAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAwFwAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T14:31:26.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T14:31:26.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "WorkoutController.cs",
               "DocumentMoniker": "C:\\Users\\Sunny\\Documents\\Dev\\FitnessApp\\FitnessApp.Server\\Controllers\\WorkoutController.cs",
               "RelativeDocumentMoniker": "FitnessApp.Server\\Controllers\\WorkoutController.cs",
               "ToolTip": "C:\\Users\\Sunny\\Documents\\Dev\\FitnessApp\\FitnessApp.Server\\Controllers\\WorkoutController.cs",
               "RelativeToolTip": "FitnessApp.Server\\Controllers\\WorkoutController.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAcwH0AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowH0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T14:24:36.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T14:24:36.376Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "GoalController.cs",
               "DocumentMoniker": "C:\\Users\\Sunny\\Documents\\Dev\\FitnessApp\\FitnessApp.Server\\Controllers\\GoalController.cs",
               "RelativeDocumentMoniker": "FitnessApp.Server\\Controllers\\GoalController.cs",
               "ToolTip": "C:\\Users\\Sunny\\Documents\\Dev\\FitnessApp\\FitnessApp.Server\\Controllers\\GoalController.cs",
               "RelativeToolTip": "FitnessApp.Server\\Controllers\\GoalController.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAIwIgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAmwHoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T07:12:47.476Z"
+              "WhenOpened": "2024-10-17T07:12:47.476Z",
+              "EditorCaption": ""
             }
           ]
         }

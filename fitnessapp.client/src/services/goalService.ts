@@ -25,7 +25,7 @@ export const fetchGoalsByUserId = async (
 };
 
 export const postGoal = async (
-  nutrition: IGoalInterface
+  goal: IGoalInterface
 ): Promise<IGoalInterface> => {
   try {
     const response = await fetch(GOALS, {
@@ -33,7 +33,7 @@ export const postGoal = async (
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(nutrition),
+      body: JSON.stringify(goal),
     });
 
     if (!response.ok) {
@@ -45,6 +45,47 @@ export const postGoal = async (
     return data;
   } catch (error) {
     throw new Error(error instanceof Error ? error.message : "Unknown error");
+  }
+};
+
+export const getGoal = async (goalId: string): Promise<IGoalInterface> => {
+  try {
+    const response = await fetch(`${GOALS}/${goalId}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData || "Failed to fetch nutrition items");
+    }
+
+    const data: IGoalInterface = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error(error instanceof Error ? error.message : "Unknown error");
+  }
+};
+
+export const updateGoal = async (id, goal) => {
+  try {
+    const response = await fetch(`${GOALS}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(goal),
+    });
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+   return;
+  } catch (error) {
+    console.error("Error updating goal:", error);
   }
 };
 

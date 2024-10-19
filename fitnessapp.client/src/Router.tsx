@@ -6,6 +6,7 @@ import Nutrition from "./pages/Nutrition";
 import NotFound from "./pages/partials/NotFound";
 import Login from "./pages/Login";
 import AddNew from "./pages/AddNew";
+import Edit from "./pages/Edit";
 
 function Router({ isLoggedIn, setIsLoggedIn }) {
   return (
@@ -17,6 +18,10 @@ function Router({ isLoggedIn, setIsLoggedIn }) {
       <Route path="login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
       <Route path="*" element={<NotFound />} />
       <Route path="add" element={<AddNew isLoggedIn={isLoggedIn} />} />
+      <Route
+        path="/edit/:id/:type"
+        element={<Edit isLoggedIn={isLoggedIn} />}
+      />
     </Routes>
   );
 }

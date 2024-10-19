@@ -19,6 +19,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import Collapse from "@mui/material/Collapse";
 import { useState } from "react";
 import { createTheme, ThemeProvider, Paper } from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
 const darkTheme = createTheme({
   palette: {
     mode: "dark", // Enable dark mode
@@ -31,6 +32,7 @@ import { GoalHeaders, NutritionHeaders, WorkoutHeaders } from "./Headers";
 import { deleteGoal } from "../../services/goalService";
 import { deleteNutrition } from "../../services/nutritionService";
 import { deleteWorkout } from "../../services/workoutService";
+import { useNavigate } from "react-router-dom";
 
 interface TablePaginationActionsProps {
   count: number;
@@ -121,7 +123,7 @@ export default function DisplayTable({ data, type }: DisplayTableProps) {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [open, setOpen] = useState<number | null>(null);
-
+  const navigate = useNavigate();
   const handleChangePage = (
     _event: React.MouseEvent<HTMLButtonElement> | null,
     newPage: number
@@ -162,10 +164,14 @@ export default function DisplayTable({ data, type }: DisplayTableProps) {
     window.location.reload();
   };
 
+  const handleEdit = async (id, type) => {
+    navigate(`/edit/${id}/${type}`);
+  };
+
   return (
     <div className="table-container">
       <ThemeProvider theme={darkTheme}>
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} sx={{ maxWidth: "70vw" }}>
           <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
             {type === "goals" && <GoalHeaders caller="display" />}
             {type === "nutrition" && <NutritionHeaders caller="display" />}
@@ -191,6 +197,13 @@ export default function DisplayTable({ data, type }: DisplayTableProps) {
                           {row.deadline.split("T")[0]}
                         </TableCell>
                         <TableCell align="center">
+                          <IconButton
+                            onClick={() => handleEdit(row.id, "goals")}
+                          >
+                            <EditIcon />
+                          </IconButton>
+                        </TableCell>
+                        <TableCell align="center">
                           <IconButton onClick={() => handleDelete(row.id)}>
                             <DeleteIcon />
                           </IconButton>
@@ -207,6 +220,14 @@ export default function DisplayTable({ data, type }: DisplayTableProps) {
                         <TableCell align="center">{row.amount}</TableCell>
                         <TableCell align="center">
                           {row.date.split("T")[0]}
+                        </TableCell>
+                        <TableCell align="center">{row.notes}</TableCell>
+                        <TableCell align="center">
+                          <IconButton
+                            onClick={() => handleEdit(row.id, "nutrition")}
+                          >
+                            <EditIcon />
+                          </IconButton>
                         </TableCell>
                         <TableCell align="center">
                           <IconButton onClick={() => handleDelete(row.id)}>
@@ -247,7 +268,7 @@ export default function DisplayTable({ data, type }: DisplayTableProps) {
                     {type === "workouts" && (
                       <TableCell
                         style={{ paddingBottom: 0, paddingTop: 0 }}
-                        colSpan={5}
+                        colSpan={6}
                       >
                         <Collapse
                           in={open === row.id}
@@ -269,7 +290,7 @@ export default function DisplayTable({ data, type }: DisplayTableProps) {
               <TableRow>
                 <TablePagination
                   rowsPerPageOptions={[5, 10, 25]}
-                  colSpan={type === "goals" ? 5 : type === "nutrition" ? 6 : 5}
+                  colSpan={type === "goals" ? 6 : type === "nutrition" ? 8 : 5}
                   count={data.length}
                   rowsPerPage={rowsPerPage}
                   page={page}

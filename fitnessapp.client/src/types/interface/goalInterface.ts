@@ -6,8 +6,8 @@ export enum Status {
 
 export default interface IGoalInterface {
   id: string;
-  name: string;
-  description: string;
-  status: Status;
-  deadline: Date;
+  Name: string;
+  Description: string;
+  Status: Status;
+  Deadline: Date;
 }

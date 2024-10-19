@@ -25,6 +25,29 @@ export const fetchNutritionByUserId = async (
   }
 };
 
+export const getNutrition = async (
+  nutritionId: string
+): Promise<INutritionInterface> => {
+  try {
+    const response = await fetch(`${NUTRITION}/${nutritionId}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData || "Failed to fetch nutrition item");
+    }
+
+    const data: INutritionInterface = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error(error instanceof Error ? error.message : "Unknown error");
+  }
+};
+
 export const postNutrition = async (
   nutrition: INutritionInterface
 ): Promise<INutritionInterface> => {
@@ -46,6 +69,25 @@ export const postNutrition = async (
     return data;
   } catch (error) {
     throw new Error(error instanceof Error ? error.message : "Unknown error");
+  }
+};
+export const updateNutrition = async (id, nutrition) => {
+  try {
+    const response = await fetch(`${NUTRITION}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(nutrition),
+    });
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    return;
+  } catch (error) {
+    console.error("Error updating goal:", error);
   }
 };
 

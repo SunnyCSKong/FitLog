@@ -29,13 +29,12 @@ namespace FitnessApp.Server.Controllers
 
         // GET: api/nutrition/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<Nutrition>> GetNutrition(int id)
+        public async Task<ActionResult<Nutrition>> GetNutrition(string id)
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var nutrition = await _context.Nutrition.FindAsync(id);
 
-            // Check if the nutrition entry exists and belongs to the user
-            if (nutrition == null || nutrition.User_Id != userId)
+            // Check if the nutrition entry exists
+            if (nutrition == null)
             {
                 return NotFound();
             }
@@ -86,7 +85,7 @@ namespace FitnessApp.Server.Controllers
 
         // PUT: api/nutrition/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutNutrition(string id, Nutrition nutrition,string User_Id)
+        public async Task<IActionResult> PutNutrition(string id, Nutrition nutrition)
         {
             if (id != nutrition.Id)
             {
@@ -96,7 +95,7 @@ namespace FitnessApp.Server.Controllers
             var existingNutrition = await _context.Nutrition.FindAsync(id);
 
             // Check if the nutrition entry exists and belongs to the user
-            if (existingNutrition == null || existingNutrition.User_Id != User_Id)
+            if (existingNutrition == null)
             {
                 return NotFound();
             }
