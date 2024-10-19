@@ -1,0 +1,11 @@
+.exercise {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.type-dropdown {
+  position: absolute;
+  top: 6.5vh;
+  left: 20vw;
+}

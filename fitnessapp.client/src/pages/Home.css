@@ -1,0 +1,96 @@
+.home-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100%;
+  gap: 5px;
+  margin-top: 2rem;
+}
+
+.charts {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.chart-item {
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.chart-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.workouts {
+  grid-column: 2;
+  grid-row: 1;
+}
+.woTable {
+  margin-right: auto;
+  margin-left: auto;
+  width: 60%;
+}
+.goals {
+  grid-column: 1;
+  grid-row: 2;
+}
+.nutrition {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.home-area {
+  justify-content: center;
+  align-items: center;
+  min-width: 40vw;
+}
+
+.toggle-button {
+  margin-top: 20px;
+}
+
+.caloric-input-overlay {
+  position: absolute;
+  top: 51%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.caloric-input {
+  display: flex;
+  align-items: center;
+}
+
+.caloric-input input {
+  margin-right: 10px;
+  width: 60px; /* Adjust width as needed */
+}
+
+.ellipsis-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 3rem;
+}
+
+.apply-button {
+  margin-right: 10px;
+}
+
+h2 {
+  margin-bottom: 0px;
+}
+
+.buttonLabel {
+  position: absolute;
+  bottom: 2vh;
+  right: 2vw;
+}
